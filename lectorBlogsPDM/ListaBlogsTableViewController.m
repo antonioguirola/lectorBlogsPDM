@@ -1,6 +1,6 @@
 //
 //  ListaBlogsTableViewController.m
-//  probandoiOS7
+//  lectorBlogsPDM
 //
 //  Created by Antonio Guirola on 08/05/14.
 //  Copyright (c) 2014 Antonio Guirola. All rights reserved.
@@ -20,6 +20,8 @@
 
 @synthesize aListaBlogs;
 @synthesize sUrlSeleccionada;
+@synthesize color1;
+@synthesize color2;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,6 +39,10 @@
         
         // obtenemos el listado de blogs en primer lugar
         [self setAListaBlogs:[self obtenerBlogs]];
+        
+        // iniciamos los colores de fondo para el pijama de la lista de blogs
+        [self setColor1: [UIColor colorWithRed:173.0/255.0 green:216.0/255.0 blue:230.0/255.0 alpha:1.0]];
+        [self setColor2: [UIColor colorWithRed:209.0/255.0 green:206.0/255.0 blue:214.0/255.0 alpha:1.0]];
     }
     return self;
 }
@@ -55,7 +61,7 @@
     self.aListaBlogs = [self obtenerBlogs];
     
     // Fijamos el color de fondo de la etiqueta de título:
-    [self.labelCabecera setBackgroundColor:[UIColor colorWithRed:230.0/255.0 green:179.0/255.0 blue:85.0/255.0 alpha:1.0]];
+    [self.labelCabecera setBackgroundColor:[self color2]];
 }
 
 -(NSArray*)obtenerBlogs
@@ -118,9 +124,9 @@
     
     // en función de si se trata de una celda par o impar pintamos su fondo
     if ([indexPath row] % 2 == 0) {
-        [cell setBackgroundColor:[UIColor colorWithRed:209.0/255.0 green:206.0/255.0 blue:214.0/255.0 alpha:1.0]];
+        [cell setBackgroundColor:[self color1]];
     } else {
-        [cell setBackgroundColor:[UIColor colorWithRed:230.0/255.0 green:179.0/255.0 blue:85.0/255.0 alpha:1.0]];
+        [cell setBackgroundColor:[self color2]];
     }
     
     return cell;

@@ -1,6 +1,6 @@
 //
 //  Blog.m
-//  probandoiOS7
+//  lectorBlogsPDM
 //
 //  Created by Antonio Guirola on 20/05/14.
 //  Copyright (c) 2014 Antonio Guirola. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.h
-//  probandoiOS7
+//  lectorBlogsPDM
 //
 //  Created by Antonio Guirola on 22/02/14.
 //  Copyright (c) 2014 Antonio Guirola. All rights reserved.

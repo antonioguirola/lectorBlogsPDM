@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M8W-N7-PkP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M8W-N7-PkP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -16,14 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4JT-4l-Bks">
+                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4JT-4l-Bks">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="525"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4A-if-JsW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4A-if-JsW">
                                 <rect key="frame" x="20" y="533" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="sdQ-yx-gmJ"/>
+                                </constraints>
                                 <state key="normal" title="Atrás">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -31,7 +34,7 @@
                                     <action selector="cmdAtras:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="06U-B2-Lgr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbK-0a-YAe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbK-0a-YAe">
                                 <rect key="frame" x="197" y="533" width="103" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Volver a la lista">
@@ -43,6 +46,17 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ycd-7k-mri" firstAttribute="top" secondItem="4JT-4l-Bks" secondAttribute="bottom" constant="43" id="GEA-Wu-Jt5"/>
+                            <constraint firstItem="YbK-0a-YAe" firstAttribute="top" secondItem="4JT-4l-Bks" secondAttribute="bottom" constant="8" symbolic="YES" id="Gbr-wq-dPw"/>
+                            <constraint firstAttribute="trailing" secondItem="YbK-0a-YAe" secondAttribute="trailing" constant="20" symbolic="YES" id="bAx-d9-HOa"/>
+                            <constraint firstItem="a4A-if-JsW" firstAttribute="baseline" secondItem="YbK-0a-YAe" secondAttribute="baseline" id="bvl-UY-uHK"/>
+                            <constraint firstItem="a4A-if-JsW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="dbk-25-oG2"/>
+                            <constraint firstItem="YbK-0a-YAe" firstAttribute="top" secondItem="4JT-4l-Bks" secondAttribute="bottom" constant="8" id="hG2-AR-iwb"/>
+                            <constraint firstItem="a4A-if-JsW" firstAttribute="top" secondItem="4JT-4l-Bks" secondAttribute="bottom" constant="8" symbolic="YES" id="jKz-Ax-8ga"/>
+                            <constraint firstItem="Ycd-7k-mri" firstAttribute="top" secondItem="a4A-if-JsW" secondAttribute="bottom" constant="5" id="vf1-rs-V7k"/>
+                            <constraint firstItem="a4A-if-JsW" firstAttribute="top" secondItem="4JT-4l-Bks" secondAttribute="bottom" constant="8" id="yfV-J1-2CJ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="botonAtras" destination="a4A-if-JsW" id="WYo-6S-3uD"/>

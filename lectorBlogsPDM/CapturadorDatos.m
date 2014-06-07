@@ -1,6 +1,6 @@
 //
 //  CapturadorDatos.m
-//  probandoiOS7
+//  lectorBlogsPDM
 //
 //  Created by Antonio Guirola on 27/03/14.
 //  Copyright (c) 2014 Antonio Guirola. All rights reserved.
